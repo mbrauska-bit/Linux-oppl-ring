@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lær Linux</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/js.js" defer></script>
+</head>
+<body>
+
+<div class="header">
+    <h1>Kom i gang med Linux</h1>
+    <p>Lær Ubuntu-terminalen steg for steg</p>
+</div>
+
+<div class="container">
+
+    <div class="boks">
+        <h2>Velkommen!</h2>
+        <p>
+            På denne nettsiden lærer du å bruke Linux-terminalen.
+            Du får forklaringer, praktiske eksempler og små oppgaver.
+            Du trenger ingen tidligere erfaring.
+        </p>
+        <p>
+            I hver modul kan du prøve forskjellige kommandoer
+            i en simulert terminal. Du trenger ikke installere noe.
+        </p>
+    </div>
+
+    <div class="boks">
+        <h2>Velg modul</h2>
+        <ul>
+            <li><a href="#modul1">Modul 1: Linux-terminalen</a></li>
+            <li><a href="#modul2">Modul 2: Grunnkommandoer</a></li>
+            <li><a href="#modul3">Modul 3: Navigering</a></li>
+            <li><a href="#modul4">Modul 4: Filer og mapper</a></li>
+        </ul>
+    </div>
+
+    <!-- MODUL 1 -->
+    <div class="boks" id="modul1">
+        <h2>Modul 1: Hva er Linux-terminalen?</h2>
+
+        <p>
+            Terminalen er et program der du skriver kommandoer
+            for å styre datamaskinen. I stedet for å bruke musen
+            kan du skrive hva datamaskinen skal gjøre.
+        </p>
+
+        <p>
+            Terminalen brukes ofte av IT-ansatte for å finne
+            informasjon, administrere datamaskiner og løse problemer.
+        </p>
+
+        <h3>Slik åpner du terminalen</h3>
+        <ol>
+            <li>Start Ubuntu.</li>
+            <li>Trykk Ctrl + Alt + T.</li>
+            <li>Terminalvinduet åpnes.</li>
+            <li>Nå kan du skrive kommandoer.</li>
+        </ol>
+
+        <h3>Din første kommando: pwd</h3>
+        <p>
+            <code>pwd</code> betyr Print Working Directory.
+            Den viser hvilken mappe du befinner deg i.
+            For eksempel betyr /home/mark at du er
+            i hjemmemappen til brukeren mark.
+        </p>
+
+        <h3>Prøv selv</h3>
+        <p>Skriv <code>pwd</code> eller <code>whoami</code>.</p>
+
+        <div class="terminal">
+            <div class="terminal-header">Terminal - Ubuntu</div>
+            <div class="terminal-innhold">
+                <p class="resultat"></p>
+                <input class="kommando-input" placeholder="Skriv kommando"
+                       aria-label="Kommando for modul 1">
+                <button onclick="kjor(this)">Kjør</button>
+            </div>
+        </div>
+
+        <p>
+            <code>whoami</code> viser navnet på brukeren
+            som er logget inn.
+        </p>
+
+        <div class="tips">
+            <strong>Tips:</strong>
+            Linux skiller mellom store og små bokstaver.
+            Skriv kommandoene nøyaktig.
+        </div>
+
+        <h3>Quiz</h3>
+        <p>Hva viser kommandoen pwd?</p>
+        <details>
+            <summary>Vis svaret</summary>
+            <p>Den viser hvilken mappe du befinner deg i.</p>
+        </details>
+    </div>
+
+    <!-- MODUL 2 -->
+    <div class="boks" id="modul2">
+        <h2>Modul 2: Grunnleggende Linux-kommandoer</h2>
+
+        <p>
+            Linux har mange kommandoer. Her lærer du hvordan
+            du kan se filer og mapper og rydde terminalvinduet.
+        </p>
+
+        <h3>Kommandoen ls</h3>
+        <p>
+            <code>ls</code> viser hvilke filer og mapper
+            som finnes i mappen du står i.
+        </p>
+
+        <h3>Kommandoen ls -l</h3>
+        <p>
+            <code>ls -l</code> viser mer informasjon,
+            for eksempel rettigheter, eier og størrelse.
+            Bokstaven d først på en linje betyr at det er en mappe.
+        </p>
+
+        <h3>Kommandoen clear</h3>
+        <p>
+            <code>clear</code> rydder terminalvinduet.
+            Den sletter ikke filer eller mapper.
+        </p>
+
+        <h3>Prøv selv</h3>
+        <ol>
+            <li>Skriv <code>ls</code> og trykk Kjør.</li>
+            <li>Skriv <code>ls -l</code> og sammenlign resultatet.</li>
+            <li>Skriv <code>clear</code> for å tømme terminalen.</li>
+        </ol>
+
+        <div class="terminal">
+            <div class="terminal-header">Terminal - Ubuntu</div>
+            <div class="terminal-innhold">
+                <p class="resultat"></p>
+                <input class="kommando-input" placeholder="Skriv kommando"
+                       aria-label="Kommando for modul 2">
+                <button onclick="kjor(this)">Kjør</button>
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tips:</strong>
+            I en ekte Ubuntu-terminal kan du trykke pil opp
+            for å hente fram tidligere kommandoer.
+        </div>
+
+        <h3>Quiz</h3>
+        <p>Hva er forskjellen mellom ls og ls -l?</p>
+        <details>
+            <summary>Vis svaret</summary>
+            <p>
+                ls viser fil- og mappenavn.
+                ls -l viser også mer informasjon om dem.
+            </p>
+        </details>
+    </div>
+
+    <!-- MODUL 3 -->
+    <div class="boks" id="modul3">
+        <h2>Modul 3: Navigering mellom mapper</h2>
+
+        <p>
+            Filer i Linux er organisert i mapper.
+            For å flytte deg mellom mapper bruker du
+            kommandoen <code>cd</code>.
+        </p>
+
+        <p>
+            cd betyr Change Directory, altså å bytte mappe.
+        </p>
+
+        <h3>Gå inn i en mappe</h3>
+        <p>
+            Skriv <code>cd Dokumenter</code> for å gå
+            inn i mappen Dokumenter.
+        </p>
+
+        <h3>Gå tilbake</h3>
+        <p>
+            <code>cd ..</code> går ett nivå opp i mappestrukturen.
+            <code>cd ~</code> går direkte til hjemmemappen.
+        </p>
+
+        <h3>Prøv selv</h3>
+        <ol>
+            <li>Skriv <code>cd Dokumenter</code>.</li>
+            <li>Skriv <code>pwd</code> for å se hvor du er.</li>
+            <li>Skriv <code>cd ..</code> for å gå tilbake.</li>
+            <li>Skriv <code>cd ~</code> for å gå til hjemmemappen.</li>
+        </ol>
+
+        <div class="terminal">
+            <div class="terminal-header">Terminal - Ubuntu</div>
+            <div class="terminal-innhold">
+                <p class="resultat"></p>
+                <input class="kommando-input" placeholder="Skriv kommando"
+                       aria-label="Kommando for modul 3">
+                <button onclick="kjor(this)">Kjør</button>
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tips:</strong>
+            I ekte Ubuntu kan du bruke Tab-tasten
+            for å fullføre mappenavn automatisk.
+            Mappen kan hete Documents i stedet for Dokumenter.
+        </div>
+
+        <h3>Quiz</h3>
+        <p>Hva er forskjellen mellom cd .. og cd ~?</p>
+        <details>
+            <summary>Vis svaret</summary>
+            <p>
+                cd .. går ett nivå opp.
+                cd ~ går til hjemmemappen.
+            </p>
+        </details>
+    </div>
+
+    <!-- MODUL 4 -->
+    <div class="boks" id="modul4">
+        <h2>Modul 4: Opprette filer og mapper</h2>
+
+        <p>
+            Du kan opprette nye filer og mapper direkte
+            fra terminalen. Dette er nyttig når du skal
+            organisere skolearbeid eller prosjekter.
+        </p>
+
+        <h3>Opprette en mappe med mkdir</h3>
+        <p>
+            <code>mkdir</code> betyr Make Directory.
+            Kommandoen oppretter en ny mappe.
+            For eksempel lager <code>mkdir skole</code>
+            en mappe som heter skole.
+        </p>
+
+        <h3>Opprette en fil med touch</h3>
+        <p>
+            <code>touch</code> kan brukes til å opprette
+            en tom fil. For eksempel lager
+            <code>touch notater.txt</code> en tekstfil.
+        </p>
+
+        <h3>Prøv selv</h3>
+        <ol>
+            <li>Skriv <code>mkdir skole</code>.</li>
+            <li>Skriv <code>ls</code> for å se mappen.</li>
+            <li>Skriv <code>cd skole</code>.</li>
+            <li>Skriv <code>touch notater.txt</code>.</li>
+            <li>Skriv <code>ls</code> for å se filen.</li>
+        </ol>
+
+        <div class="terminal">
+            <div class="terminal-header">Terminal - Ubuntu</div>
+            <div class="terminal-innhold">
+                <p class="resultat"></p>
+                <input class="kommando-input" placeholder="Skriv kommando"
+                       aria-label="Kommando for modul 4">
+                <button onclick="kjor(this)">Kjør</button>
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tips:</strong>
+            Bruk korte og tydelige navn på filer og mapper.
+            Hvis en fil allerede finnes, vil touch normalt
+            oppdatere tidsstempelet i stedet for å lage en ny fil.
+        </div>
+
+        <h3>Quiz</h3>
+        <p>Hva er forskjellen mellom mkdir og touch?</p>
+        <details>
+            <summary>Vis svaret</summary>
+            <p>
+                mkdir oppretter en mappe.
+                touch kan opprette en tom fil.
+            </p>
+        </details>
+    </div>
+
+</div>
+
+
+</body>
+</html>
