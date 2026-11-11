@@ -20,5 +20,6 @@ function kjor(knapp) {
     else svar = "Ukjent kommando";
 
     resultat.innerText = svar;
+    resultat.classList.toggle("ukjent", svar === "Ukjent kommando");
     input.value = "";
 }

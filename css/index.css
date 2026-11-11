@@ -81,6 +81,10 @@ code {
     overflow-wrap: anywhere;
 }
 
+.resultat.ukjent {
+    color: red;
+}
+
 button {
     background: #51485d;
     color: white;
